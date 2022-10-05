@@ -704,7 +704,8 @@ section.testimonials h3 {
 section.testimonials p {
   font-size: 14px;
   color: #777;
-  margin-bottom: 40px;
+  line-height: 1.5;
+  margin-bottom: 50px;
 }
 
 section.testimonials .testimonial {
@@ -730,8 +731,10 @@ section.testimonials .test img {
 }
 section.testimonials .test p {
   font-size: 14px;
-  color: #333;
+  color: #444;
   margin-bottom: 20px;
+  line-height: 1.5;
+
   text-align: left;
 }
 section.testimonials .test h6 {
@@ -798,7 +801,9 @@ section.testimonials .test h6 {
   background: #e3e3e3;
 }
 .skills .progress .progress-bar span {
+  font-size: 14px;
   display: block;
+  padding: 2px;
   height: 100%;
   background: var(--main-color);
   position: relative;
@@ -806,8 +811,8 @@ section.testimonials .test h6 {
 .skills .progress .progress-bar span::before {
   content: attr(data-progress);
   top: -26px;
-  padding: 2px;
-  background: black;
+  padding: 2px 5px;
+  background: #323232;
   color: white;
   right: 0;
   position: absolute;
