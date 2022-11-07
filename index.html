@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
   </head>
   <body>
     <header>
@@ -25,35 +30,69 @@
             <li><a href="#pricing">pricing</a></li>
             <li><a href="#contact">contact</a></li>
           </ul>
-          <form class="search">
+          <div class="search">
             <i class="fa-solid fa-magnifying-glass"></i>
-          </form>
+          </div>
         </nav>
       </div>
     </header>
     <section class="landing">
-      <div class="overlay"></div>
-      <div class="content">
-        <div class="text-wrap">
-          <h2>
-            HELLO WORLD! <br />
-            WE ARE KASPER, WE MAKE ART.
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
-            dolores natus distinctio neque aperiam tempore. Consequatur aliquam
-            distinctio nihil temporibus dolore laborum, dignissimos repellendus
-            voluptatibus nisi magni quos ducimus veniam!
-          </p>
+      <div class="slide">
+        <img src="images/landing.jpg" alt="Landing 1" />
+        <div class="overlay"></div>
+        <div class="content">
+          <div class="text-wrap">
+            <h2>
+              HELLO WORLD! <br />
+              WE ARE KASPER, WE MAKE ART.
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+              dolores natus distinctio neque aperiam tempore. Consequatur
+              aliquam distinctio nihil temporibus dolore laborum, dignissimos
+              repellendus voluptatibus nisi magni quos ducimus veniam!
+            </p>
+          </div>
         </div>
       </div>
-      <i class="fa-solid fa-chevron-right right-arrow slide"></i>
-      <i class="fa-solid fa-chevron-left left-arrow slide"></i>
-      <ul class="bullets">
-        <li></li>
-        <li class="active"></li>
-        <li></li>
-      </ul>
+      <div class="slide-container">
+        <img src="images/landing2.jpg" alt="Landing 2" />
+
+        <div class="overlay"></div>
+        <div class="content">
+          <div class="text-wrap">
+            <h2>
+              HELLO WORLD! <br />
+              WE ARE KASPER, WE MAKE ART.
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+              dolores natus distinctio neque aperiam tempore. Consequatur
+              aliquam distinctio nihil temporibus dolore laborum, dignissimos
+              repellendus voluptatibus nisi magni quos ducimus veniam!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="slide-container">
+        <img src="images/landing3.jpg" alt="Landing 3" />
+
+        <div class="overlay"></div>
+        <div class="content">
+          <div class="text-wrap">
+            <h2>
+              HELLO WORLD! <br />
+              WE ARE KASPER, WE MAKE ART.
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+              dolores natus distinctio neque aperiam tempore. Consequatur
+              aliquam distinctio nihil temporibus dolore laborum, dignissimos
+              repellendus voluptatibus nisi magni quos ducimus veniam!
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
     <section class="services" id="services">
       <div class="container">
@@ -128,15 +167,15 @@
       </p>
       <div class="filters">
         <ul>
-          <li class="active"><a href="#">All</a></li>
-          <li><a href="#">App</a></li>
-          <li><a href="#">Photography</a></li>
-          <li><a href="#">Web</a></li>
-          <li><a href="#">Print</a></li>
+          <li id="all" class="active"><a href="#">All</a></li>
+          <li id="app"><a href="#">App</a></li>
+          <li id="photography"><a href="#">Photography</a></li>
+          <li id="web"><a href="#">Web</a></li>
+          <li id="print"><a href="#">Print</a></li>
         </ul>
       </div>
       <div class="gallery-container">
-        <div class="gallery">
+        <div class="gallery app">
           <img src="images/1.jpg" alt="" />
           <div class="caption">
             <i class="fa-solid fa-plus zoom"></i>
@@ -146,7 +185,7 @@
             </div>
           </div>
         </div>
-        <div class="gallery">
+        <div class="gallery app">
           <img src="images/2.jpg" alt="" />
           <div class="caption">
             <i class="fa-solid fa-plus zoom"></i>
@@ -156,7 +195,7 @@
             </div>
           </div>
         </div>
-        <div class="gallery">
+        <div class="gallery web">
           <img src="images/3.jpg" alt="" />
           <div class="caption">
             <i class="fa-solid fa-plus zoom"></i>
@@ -166,7 +205,7 @@
             </div>
           </div>
         </div>
-        <div class="gallery">
+        <div class="gallery print">
           <img src="images/4.jpg" alt="" />
           <div class="caption">
             <i class="fa-solid fa-plus zoom"></i>
@@ -176,7 +215,7 @@
             </div>
           </div>
         </div>
-        <div class="gallery">
+        <div class="gallery photography">
           <img src="images/5.jpg" alt="" />
           <div class="caption">
             <i class="fa-solid fa-plus zoom"></i>
@@ -186,7 +225,7 @@
             </div>
           </div>
         </div>
-        <div class="gallery">
+        <div class="gallery web">
           <img src="images/6.jpg" alt="" />
           <div class="caption">
             <i class="fa-solid fa-plus zoom"></i>
@@ -196,7 +235,7 @@
             </div>
           </div>
         </div>
-        <div class="gallery">
+        <div class="gallery print">
           <img src="images/7.jpg" alt="" />
           <div class="caption">
             <i class="fa-solid fa-plus zoom"></i>
@@ -206,7 +245,7 @@
             </div>
           </div>
         </div>
-        <div class="gallery">
+        <div class="gallery photography">
           <img src="images/8.jpg" alt="" />
           <div class="caption">
             <i class="fa-solid fa-plus zoom"></i>
@@ -222,9 +261,15 @@
       </div>
     </section>
     <section class="video-section">
-      <!-- <video muted autoplay loop>
-        <source src="video/video.mp4#t=10,60" type="video/mp4" />
-      </video> -->
+      <div style="position: relative; padding-top: 56.25%">
+        <iframe
+          src="https://www.youtube.com/embed/od5nla42Jvc?autoplay=1&mute=1&controls=0&loop=1"
+          frameborder="0"
+          allowfullscreen
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"
+        ></iframe>
+      </div>
+
       <div class="video-container">
         <div class="video-caption">
           <h3>super awesome video here</h3>
@@ -499,5 +544,26 @@
         <p>@2014 - <span>Kasper</span> All Right Reserved</p>
       </div>
     </footer>
+    <form class="search-container">
+      <i class="fa-solid fa-close close"></i>
+
+      <div>
+        <i class="fa-solid fa-magnifying-glass search"></i>
+        <input type="text" placeholder="Enter Your search..." />
+      </div>
+    </form>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="app.js"></script>
   </body>
 </html>

@@ -43,6 +43,7 @@ ul {
   border: transparent;
   text-transform: uppercase;
   font-size: 14px;
+  cursor: pointer;
 }
 /* Media Queries  */
 
@@ -138,21 +139,21 @@ header nav a:hover {
   color: var(--main-color);
   border-bottom: 1px solid var(--main-color);
 }
-header nav form {
+header nav .search {
   width: 40px;
   height: 30px;
   position: relative;
   margin-left: 30px;
   border-left: 1px solid white;
 }
-header form i {
+header .search i {
   color: white;
-
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   right: 0;
   font-size: 18px;
+  cursor: pointer;
 }
 
 header nav .toggle-menu:hover + ul {
@@ -164,6 +165,43 @@ header nav .toggle-menu:hover + ul {
   background-color: #2a2a2a;
   width: calc(100% - 30px);
 }
+.search-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000de;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-100%);
+  transition: transform 0.7s ease;
+}
+.search-container.open {
+  transform: translateX(0);
+}
+.search-container input {
+  background: transparent;
+  padding: 10px 40px;
+  border: 1px solid grey;
+  outline: 0;
+  color: white;
+}
+.search-container i.search {
+  position: absolute;
+  padding: 12px;
+  min-width: 40px;
+  color: #a4a4a4;
+}
+.search-container i.close {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  color: white;
+  font-size: 21px;
+  cursor: pointer;
+}
 
 /* End Header section  */
 
@@ -171,8 +209,8 @@ header nav .toggle-menu:hover + ul {
 .landing {
   min-height: 100vh;
   position: relative;
-  background-image: url("../images/landing3.jpg");
-  background-size: cover;
+  /* background-image: url("../images/landing3.jpg"); */
+  /* background-size: cover; */
 }
 .landing .overlay {
   position: absolute;
@@ -231,6 +269,20 @@ header nav .toggle-menu:hover + ul {
   position: absolute;
   transform: translateY(-50%);
   cursor: pointer;
+  z-index: 2;
+  cursor: pointer;
+}
+.landing .slide-container {
+  position: relative;
+}
+.slick-slide img {
+  display: block;
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+}
+.slick-slide {
+  position: relative;
 }
 .landing .right-arrow {
   right: 30px;
@@ -238,12 +290,7 @@ header nav .toggle-menu:hover + ul {
 .landing .left-arrow {
   left: 30px;
 }
-@media (max-width: 767px) {
-  .landing .slide {
-    display: none;
-  }
-}
-.landing .bullets {
+.landing .slick-dots {
   list-style: none;
   position: absolute;
   left: 50%;
@@ -251,7 +298,7 @@ header nav .toggle-menu:hover + ul {
   bottom: 30px;
   display: flex;
 }
-.landing .bullets li {
+.landing .slick-dots li {
   color: white;
   width: 15px;
   height: 15px;
@@ -260,7 +307,10 @@ header nav .toggle-menu:hover + ul {
   border-radius: 50%;
   cursor: pointer;
 }
-.landing .bullets li.active {
+.landing .slick-dots li button {
+  display: none;
+}
+.landing .slick-dots li.slick-active {
   background-color: var(--main-color);
   border-color: var(--main-color);
 }
@@ -446,6 +496,7 @@ section.portfolio {
   text-decoration: none;
   text-transform: uppercase;
 }
+.portfolio .filters li:hover a,
 .portfolio .filters li.active a {
   background-color: var(--main-color);
   color: white;
@@ -453,10 +504,12 @@ section.portfolio {
 .portfolio .gallery-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .portfolio .gallery-container .gallery {
   position: relative;
   height: 300px;
+  overflow: hidden;
 }
 @media (max-width: 767px) {
   .portfolio .gallery-container .gallery {
@@ -477,6 +530,8 @@ section.portfolio {
   width: 100%;
   object-fit: cover;
   height: 100%;
+  transition: 0.4s ease;
+  transition-delay: 200ms;
 }
 .portfolio .gallery-container .gallery .caption {
   position: absolute;
@@ -523,6 +578,9 @@ section.portfolio {
 .portfolio .gallery-container .gallery:hover .caption {
   opacity: 1;
 }
+.portfolio .gallery-container .gallery:hover img {
+  transform: scale(1.4) rotate(25deg);
+}
 
 /* End portfolio section  */
 
@@ -530,10 +588,7 @@ section.portfolio {
 
 .video-section {
   position: relative;
-  background-image: url(../images/landing4.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 400px;
+  /* height: 400px; */
 }
 .video-section::before {
   content: "";
@@ -543,17 +598,17 @@ section.portfolio {
   width: 100%;
   height: 100%;
   background-color: #2a2a2a6f;
+  /* z-index: 1; */
 }
-/* .video-section video {
-  width: 100%;
-} */
-
 .video-section .video-container {
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .video-section .video-container .video-caption {
   padding: 40px;
@@ -582,6 +637,7 @@ section.portfolio {
   background-color: #2a2a2aba;
   border: none;
   font-weight: normal;
+  cursor: pointer;
 }
 
 /* End video section  */
