@@ -14,6 +14,13 @@ $(document).ready(function () {
     ],
   });
 
+  // testimonials section slider
+
+  $(".test-slick").slick({
+    arrows: false,
+    dots: true,
+  });
+
   // gallery filter
   $(".filters ul a").on("click", function (e) {
     e.preventDefault();

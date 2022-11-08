@@ -746,6 +746,7 @@ section.testimonials .container {
 
 section.testimonials .container > div {
   flex-basis: 47%;
+  overflow: hidden;
 }
 @media (max-width: 991px) {
   section.testimonials .container > div {
@@ -815,13 +816,13 @@ section.testimonials .test h6 {
   }
 }
 
-.testimonials .bullets {
+.testimonials ul.slick-dots {
   display: flex;
   justify-content: center;
   margin-top: 50px;
   margin-bottom: 50px;
 }
-.testimonials .bullets li {
+.testimonials ul.slick-dots li {
   color: white;
   width: 15px;
   height: 15px;
@@ -830,7 +831,10 @@ section.testimonials .test h6 {
   border-radius: 50%;
   cursor: pointer;
 }
-.testimonials .bullets li.active {
+.testimonials ul.slick-dots li button {
+  display: none;
+}
+.testimonials ul.slick-dots li.slick-active {
   background-color: var(--main-color);
   border-color: var(--main-color);
 }
