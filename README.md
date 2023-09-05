@@ -17,3 +17,6 @@ i tried to make it looking as close to the design as possible.
 
 You can find the PSD template here => 
 https://www.graphberry.com/item/kasper-one-page-psd-template
+
+## Demo image
+![demo image](https://github.com/samia13/Kasper-PSD-template-conversion/blob/11e618527e6ccd0cbdfb736a14ab2f789313c025/images/Kasper-Template-Design.png)
