@@ -11,7 +11,7 @@ i tried to make it looking as close to the design as possible.
 
 ## Live Preview
 
-[Preview Site](https://samia13.github.io/Template-design-2/)
+[Preview Site](https://samia13.github.io/Kasper-PSD-template-conversion/)
 
 ## Reference
 
